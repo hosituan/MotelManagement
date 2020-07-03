@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="nhatro" Class="DataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(local);Initial Catalog=nhatro;Integrated Security=True" SettingsObjectName="test.Properties.Settings" SettingsPropertyName="nhatroConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lichsu" Member="lichsus">
+    <Type Name="lichsu">
+      <Column Name="thoigian" Type="System.String" DbType="NVarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="kwh" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="nuoc" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="tien" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ngaythem" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ngph" Member="ngphs">
+    <Type Name="ngph">
+      <Column Name="idphong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hotennguoi1" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="hotennguoi2" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ngayvao" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.nguoi" Member="nguois">
+    <Type Name="nguoi">
+      <Column Name="idnguoi" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="cmnd" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="diachi" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="quequan" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="tuoi" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="sdt" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="tennguoithan" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="sdtnguoithan" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.phong" Member="phongs">
+    <Type Name="phong">
+      <Column Name="idphong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="gia" Type="System.String" DbType="VarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="tinhtrang" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="VarChar(45)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tienno" Member="tiennos">
+    <Type Name="tienno">
+      <Column Name="idphong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="sotienno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ghichu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.diennuoc" Member="diennuocs">
+    <Type Name="diennuoc">
+      <Column Name="idphong" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="kwh" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="nuoc" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Tongtien" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ghichu" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.giaodich" Member="giaodiches">
+    <Type Name="giaodich">
+      <Column Name="idbill" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="idphong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="sotien" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ngaythanhtoan" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="thoigian" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="nguoithanhtoan" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="ngaythemvao" Type="System.String" DbType="NVarChar(45) NOT NULL" CanBeNull="false" />
+      <Column Name="ngaychinhsua" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.user1" Member="user1s">
+    <Type Name="user1">
+      <Column Name="username" Type="System.String" DbType="NVarChar(45) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="hoten" Type="System.String" DbType="NVarChar(45)" CanBeNull="true" />
+      <Column Name="pass2" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
